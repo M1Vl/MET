@@ -1,0 +1,9 @@
+conservative_short              20  40  35  5       20  1.5 11
+conservative_middle             20  50  20  10      12  4   8
+conservative_long               30  55  7.5 7.5     5   7   3
+medium_passive                  40  60  0   0       30  1   10
+medium_diversified              20  20  20  40      30  2   16
+medium_active                   60  40  0   0       35  2.5 21
+aggressive_balanced             80  0   0   20      42  1.5 24
+aggressive_sector_concentrate   80  0   0   20      50  0.5 30
+aggressive_sector_diversified   100 0   0   0       48  1   22
