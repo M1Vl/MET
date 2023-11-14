@@ -25,7 +25,7 @@ class Portfolio:
         b = 1 - (max(self.horizont, _horizont) - min(self.horizont, _horizont))
         c = 1 - (max(self.monitor, _monitor) - min(self.monitor, _monitor))
         global k_risk, k_horizont, k_monitor
-        return (k_risk * a + k_horizont * b + k_monitor * (c if self.monitor < _monitor else 1)) / (k_risk + k_monitor + k_horizont)
+        return (k_risk * a + k_horizont * b + k_monitor * (c if self.monitor > _monitor else 1)) / (k_risk + k_monitor + k_horizont)
 
     def equals_consists(self, other):
         # returns [0,1]  (1 - full equal)
