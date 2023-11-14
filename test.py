@@ -38,7 +38,7 @@ if vse_norm:
     elif c == 2:
         risk__ = 30
     elif c == 3:
-        risk__ = 60
+        risk__ = 65
     else:
         vse_norm = False
         print("Ошибка, вы ввели некорректное значение")
@@ -69,7 +69,7 @@ if vse_norm:
       2) Устройство B
       """))
     if f == 1:
-        k_risk += 0.45
+        k_risk += 0.55
     elif f == 2:
         k_risk += 0.1
     else:
@@ -88,7 +88,7 @@ if vse_norm:
     elif g == 2:
         k_risk += 0.3
     elif g == 3:
-        k_risk += 0.7
+        k_risk += 0.75
     else:
         vse_norm = False
         print("Ошибка, вы ввели некорректное значение")
@@ -113,13 +113,14 @@ if vse_norm:
     with open('input.txt', 'w') as f:
         risk__ /= 100
         hor__ /= 7
-        # print(f"risk = {risk__}")
+        print(f"risk = {risk__}")
         # print(f"hor = {hor__}")
-        hor__ = (hor__ * fin + k_hor * 0.3) / (fin + k_hor * 0.3)
-        risk__ = fin * (risk__ * fin + 0.3 * k_risk / 2) / (fin + k_risk * 0.3)
-        # print(f"risk = {risk__}")
+        hor__ = (hor__ * fin + k_hor * 0.3) / (fin + 0.3)
+        risk__ = fin * (risk__ * fin + 0.3 * k_risk / 2) / (fin + 0.3)
+        print(f"risk = {risk__}")
         # print(f"hor = {hor__}")
         risk__ = int(risk__ * 100)
         hor__ = int(hor__ * 7)
         f.write(f'{risk__} {hor__} {time__}')
     main_()
+  
